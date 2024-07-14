@@ -295,6 +295,7 @@ header nav ul li a.active {
 }
 .footer-col ul{
   list-style: none !important;
+  text-decoration: none;
 }
 .footer-col h4 {
   font-size: 20px;
