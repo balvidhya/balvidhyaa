@@ -351,7 +351,7 @@ header nav ul li a.active {
     color: #ffffff;
     transition: all 0.5s ease;
 }
-.footer-col .social-links .fab{
+.fab{
   line-height:0 !important;
 }
 .footer-col .social-links a:hover {
