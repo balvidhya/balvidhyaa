@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, system-ui, -apple-system, sans-serif;
+}
+@font-face {
+  font-family: Poppins;
+  src: url('Poppins-Medium.ttf');
+}
+:root {
+  --dark-one: #333;
+  --dark-two: #7a7a7a;
+  --main-color: rgb(35, 35, 85);
+  --light-one: #fff;
+  --light-two: #f9fafb;
+}
+
+/* General Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;;
+}
+
+/* Navbar Styles */
+header {
+    padding: 1vw 8vw;
+    top: 0;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 999;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+header img {
+    width: 50px;
+    height: 50px;   
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(35, 35, 85);
+    margin: 0 12px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: #fdc938;
+    color: #fdc938;
+}
+
+.menubar {
+    cursor: pointer;
+    display: none;
+}
+
+.menubar div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+
+/* Footer styles */
+.footer {
+  background-color: rgb(235, 235, 241);
+  padding: 50px 50px 5px 50px;
+  color: black;
+}
+
+.footer .container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.footer-col {
+  width: 23%;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: rgb(24, 24, 49);
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(24, 24, 49);
+  height: 2px;
+  box-sizing: border-box;
+  width: 55px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: rgb(24, 24, 49);
+  border-bottom: 1px solid rgb(24, 24, 49);
+}
+.footer-col .footerinfo li a:hover{
+  color: rgb(24, 24, 49);
+  border-bottom: none !important;
+  transform: translateY(-2px);
+}
+.footer-col .social-links{
+  margin-top: 10px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color:rgb(24, 24, 49);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: rgb(24, 24, 49);
+  background-color: #ffffff;
+}
+
+.footer-col.about-us {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-col.about-us p {
+  color: #bbbbbb;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-col.copyright {
+  width: 100%;
+  text-align: center;
+}
+
+.footer-col.copyright p {
+  color: #bbbbbb;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .footer .container{
+      padding: 0;
+  }
+  .footer-col {
+      width: 20%;
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+      width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .menubar {
+      display: block;
+  }
+  header nav {
+      position: absolute;
+      right: -100%;
+      top: 70px;
+      width: 100%;
+      background: #fff;
+      padding: 30px;
+      transition: 0.3s ease;
+  }
+  header #navigation:checked ~ nav {
+      right: 0;
+  }
+  header nav ul {
+      display: block;
+  }
+  header nav ul li a {
+      margin: 5px 0;
+  }
+  header nav ul li a:hover {
+      border-bottom-color: var(--second-color);
+      color: var(--second-color);
+  }
+  header {
+      padding: 0 30px;
+  }
+}
