@@ -38,6 +38,9 @@ textarea {
 a {
   text-decoration: none;
 }
+ul{
+  list-style:none !important;
+}
 /* Navigation Bar*/
 header {
   padding: 1vw 8vw;
